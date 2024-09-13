@@ -36,24 +36,37 @@ h1{
 
 .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
-    row-gap: 40px;
+    gap: 15px;
     border: 3px solid white;
     border-radius: 10px;
     padding: 18px;
     background-color: transparent;
 }
 
-.add{
-    background-color: white;
-    height: 190px;
-    width: min(30%, 80%);
+.add, .card{
+    width: min(30%, 90%);
     border-radius: 10px;
     display: flex;
+}
+
+.card{
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(255, 221, 142);
+    height: max-content;
+    padding: 12px;
+    border-left: 8px solid #cb8b25;
+}
+
+.add{
+    background-color: white;
+    height: max-content;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    align-self: center;
 } 
 
 .add:hover{
@@ -99,4 +112,21 @@ input, select{
 h3{
     text-align: center;
     margin: 8px;
+}
+
+h4{
+    text-align: center;
+    margin: 0px;
+    font-size: min(1);
+}
+
+.remove{
+    background-color: red;
+    border-radius: 6px;
+    border: 0;
+    padding: 4px;
+    font-size: medium;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
