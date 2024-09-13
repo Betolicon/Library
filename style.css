@@ -1,0 +1,17 @@
+body{
+    background-image: linear-gradient(150deg, #eeebd9, #dedab8, #c8c28e, #dedab8, #eeebd9);
+    background-size: 500%;
+    animation: fondo 10s infinite;
+}
+
+@keyframes fondo{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 50% 100%;
+    }
+    100%{
+        background-position: 100% 50%;
+    }
+}
