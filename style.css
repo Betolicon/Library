@@ -54,6 +54,7 @@ h1{
 .card{
     flex-direction: column;
     justify-content: space-between;
+    gap: 5px;
     background-color: rgb(255, 221, 142);
     height: max-content;
     padding: 12px;
@@ -120,8 +121,15 @@ h4{
     font-size: min(1);
 }
 
-.remove{
+.remove, .incorrect{
     background-color: red;
+}
+
+.correct{
+    background-color: rgb(71, 141, 245);
+}
+
+.remove, .correct, .incorrect{
     border-radius: 6px;
     border: 0;
     padding: 4px;
