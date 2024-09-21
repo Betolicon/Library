@@ -2,14 +2,13 @@ const myLibrary = [];
 const newBook = document.querySelector(".add")
 const closeButton = document.getElementById('Submit')
 
-function Book(title, author, numberPages, read){
+class Book{
+ constructor(title, author, numberPages, read){
     this.title = title;
     this.author = author;
     this.numberPages = numberPages
     this.read = read === 'yes' ? 'Read' : 'Not read yet'
-    this.info = function(){
-        return `${this.title} by ${this.author}, ${this.numberPages} pages, ${this.read}`
-    }
+}
 }
 
 function addBookToLibrary(title, author, numberPages, read){
@@ -67,6 +66,8 @@ const SubmitForm = (e) =>{
     if(title.length != 0 && author.length != 0 && read.length != 0 ){
     addBookToLibrary(title, author, numberPages, read);
     e.preventDefault()
+    let dlg = document.querySelector("form");
+    dlg.reset();
     }
 }
 
